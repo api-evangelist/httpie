@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/httpie/refs/heads/main/json-schema/session.json",
+  "title": "HTTPie Session",
+  "description": "Schema representing an HTTPie named session, which persists headers, authentication, and cookies across requests.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the HTTPie session."
+    },
+    "host": {
+      "type": "string",
+      "description": "The host associated with this session."
+    },
+    "auth": {
+      "type": "object",
+      "description": "Authentication credentials stored in the session.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The authentication type.",
+          "enum": ["basic", "bearer", "digest"]
+        },
+        "username": {
+          "type": "string",
+          "description": "Username for basic or digest authentication."
+        },
+        "password": {
+          "type": "string",
+          "description": "Password for basic or digest authentication."
+        },
+        "token": {
+          "type": "string",
+          "description": "Token for bearer authentication."
+        }
+      }
+    },
+    "headers": {
+      "type": "object",
+      "description": "Default headers sent with every request in this session.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "cookies": {
+      "type": "array",
+      "description": "Cookies stored and sent with requests in this session.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The cookie name."
+          },
+          "value": {
+            "type": "string",
+            "description": "The cookie value."
+          },
+          "domain": {
+            "type": "string",
+            "description": "The domain the cookie is scoped to."
+          },
+          "path": {
+            "type": "string",
+            "description": "The path the cookie is scoped to."
+          },
+          "secure": {
+            "type": "boolean",
+            "description": "Whether the cookie requires HTTPS."
+          },
+          "expires": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The expiration date-time of the cookie."
+          }
+        },
+        "required": ["name", "value"]
+      }
+    },
+    "verify": {
+      "type": "boolean",
+      "description": "Whether to verify SSL certificates for requests in this session.",
+      "default": true
+    }
+  },
+  "required": ["name"]
+}

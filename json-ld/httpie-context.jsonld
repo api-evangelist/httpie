@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "httpie": "https://httpie.io/ns#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "version": "schema:softwareVersion",
+    "Request": "httpie:Request",
+    "Response": "httpie:Response",
+    "Session": "httpie:Session",
+    "method": "httpie:method",
+    "statusCode": "httpie:statusCode",
+    "headers": "httpie:headers",
+    "body": "httpie:body",
+    "auth": "httpie:auth",
+    "cookies": "httpie:cookies",
+    "elapsed": "httpie:elapsed",
+    "timeout": "httpie:timeout",
+    "host": "httpie:host",
+    "queryParams": "httpie:queryParams",
+    "contentType": "httpie:contentType",
+    "encoding": "httpie:encoding",
+    "verify": "httpie:verify",
+    "SoftwareApplication": "schema:SoftwareApplication",
+    "APIClient": "httpie:APIClient"
+  }
+}

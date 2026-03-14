@@ -6,13 +6,29 @@ apis:
     name: HTTPie
     tags:
       - API
+      - Client
+      - Command Line
     humanURL: https://httpie.io/
     properties:
       - url: https://httpie.io/
         type: Documentation
+      - url: openapi/httpie-httpie-openapi.yml
+        type: OpenAPI
+      - url: json-schema/request.json
+        type: JSONSchema
+      - url: json-schema/response.json
+        type: JSONSchema
+      - url: json-schema/session.json
+        type: JSONSchema
+      - url: json-ld/httpie-context.jsonld
+        type: JSONLD
     description: >-
-      A great CLI tool to use with HTTP servers, RESTful APIs, and web services
-      youre in luck. HTTPie from @jakubroztocil is the perfect solution.
+      HTTPie is a user-friendly command-line and web-based HTTP client designed
+      for interacting with APIs and web services. It provides an intuitive
+      interface for crafting HTTP requests, inspecting responses, and managing
+      sessions with persistent headers, authentication, and cookies. The HTTPie
+      API exposes a hello endpoint for connectivity testing and a web application
+      interface for graphical API interaction.
 name: HTTPie
 tags:
   - Command Line
@@ -22,11 +38,13 @@ type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2025-01-08'
-modified: '2025-01-13'
+modified: '2026-03-14'
 position: Consumer
 description: >-
-  A great CLI tool to use with HTTP servers, RESTful APIs, and web services
-  youre in luck. HTTPie from @jakubroztocil is the perfect solution.
+  HTTPie is a user-friendly command-line and web-based HTTP client designed for
+  interacting with APIs and web services. It provides an intuitive interface for
+  crafting HTTP requests, inspecting responses, and managing sessions with
+  persistent headers, authentication, and cookies.
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/httpie/refs/heads/main/json-schema/response.json",
+  "title": "HTTPie Response",
+  "description": "Schema representing an HTTPie HTTP response, including status, headers, and body.",
+  "type": "object",
+  "properties": {
+    "statusCode": {
+      "type": "integer",
+      "description": "The HTTP status code of the response.",
+      "minimum": 100,
+      "maximum": 599
+    },
+    "statusText": {
+      "type": "string",
+      "description": "The HTTP status text accompanying the status code."
+    },
+    "httpVersion": {
+      "type": "string",
+      "description": "The HTTP version used in the response.",
+      "examples": ["HTTP/1.1", "HTTP/2"]
+    },
+    "headers": {
+      "type": "object",
+      "description": "HTTP response headers.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "body": {
+      "description": "The response body content.",
+      "oneOf": [
+        { "type": "string" },
+        { "type": "object" }
+      ]
+    },
+    "contentType": {
+      "type": "string",
+      "description": "The MIME type of the response body."
+    },
+    "elapsed": {
+      "type": "number",
+      "description": "Time elapsed for the request-response cycle in seconds."
+    },
+    "encoding": {
+      "type": "string",
+      "description": "The character encoding of the response body.",
+      "examples": ["utf-8", "ascii", "iso-8859-1"]
+    }
+  },
+  "required": ["statusCode", "headers"]
+}

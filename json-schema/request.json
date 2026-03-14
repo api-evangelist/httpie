@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/httpie/refs/heads/main/json-schema/request.json",
+  "title": "HTTPie Request",
+  "description": "Schema representing an HTTPie HTTP request, including method, URL, headers, and body.",
+  "type": "object",
+  "properties": {
+    "method": {
+      "type": "string",
+      "description": "The HTTP method for the request.",
+      "enum": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"]
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The target URL for the request."
+    },
+    "headers": {
+      "type": "object",
+      "description": "HTTP headers to include in the request.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "queryParams": {
+      "type": "object",
+      "description": "Query string parameters appended to the URL.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "body": {
+      "description": "The request body payload.",
+      "oneOf": [
+        { "type": "string" },
+        { "type": "object" }
+      ]
+    },
+    "auth": {
+      "type": "object",
+      "description": "Authentication credentials for the request.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The authentication type.",
+          "enum": ["basic", "bearer", "digest"]
+        },
+        "username": {
+          "type": "string",
+          "description": "Username for basic or digest authentication."
+        },
+        "password": {
+          "type": "string",
+          "description": "Password for basic or digest authentication."
+        },
+        "token": {
+          "type": "string",
+          "description": "Token for bearer authentication."
+        }
+      },
+      "required": ["type"]
+    },
+    "timeout": {
+      "type": "number",
+      "description": "Request timeout in seconds."
+    },
+    "verify": {
+      "type": "boolean",
+      "description": "Whether to verify SSL certificates.",
+      "default": true
+    }
+  },
+  "required": ["method", "url"]
+}

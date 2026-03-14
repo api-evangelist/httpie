@@ -1,0 +1,90 @@
+openapi: 3.1.0
+info:
+  title: HTTPie API
+  description: >-
+    The HTTPie API provides endpoints for the HTTPie web application,
+    including a simple hello endpoint for connectivity testing and
+    access to the HTTPie web-based API client interface. HTTPie is
+    a user-friendly command-line and web-based HTTP client that makes
+    interacting with APIs and web services intuitive and productive.
+  version: 1.0.0
+  contact:
+    name: HTTPie
+    url: https://httpie.io
+  license:
+    name: BSD-3-Clause
+    url: https://opensource.org/licenses/BSD-3-Clause
+servers:
+  - url: https://httpie.io
+    description: HTTPie Production
+paths:
+  /hello:
+    get:
+      operationId: getHello
+      summary: Hello endpoint
+      description: >-
+        A simple hello endpoint used for connectivity testing and
+        verification that the HTTPie service is running and reachable.
+      responses:
+        '200':
+          description: Successful hello response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HelloResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /app:
+    get:
+      operationId: getApp
+      summary: HTTPie web application
+      description: >-
+        Access the HTTPie web-based API client application, which
+        provides a graphical interface for crafting and sending HTTP
+        requests, inspecting responses, and managing API workflows.
+      responses:
+        '200':
+          description: Web application loaded successfully
+          content:
+            text/html:
+              schema:
+                type: string
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  schemas:
+    HelloResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: A greeting message confirming service availability.
+          examples:
+            - hello
+        version:
+          type: string
+          description: The current version of the HTTPie service.
+          examples:
+            - 1.0.0
+      required:
+        - message
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: A human-readable error message.
+        code:
+          type: integer
+          description: The HTTP status code of the error.
+      required:
+        - error
+        - code
