@@ -1,51 +1,53 @@
 aid: httpie
+name: HTTPie
+description: >-
+  HTTPie is a user-friendly command-line and web-based HTTP client designed
+  for interacting with APIs and web services. It provides an intuitive
+  interface for crafting HTTP requests, inspecting responses, and managing
+  sessions with persistent headers, authentication, and cookies.
 url: >-
   https://raw.githubusercontent.com/api-evangelist/httpie/refs/heads/main/apis.yml
-apis:
-  - aid: httpie:httpie
-    name: HTTPie
-    tags:
-      - API
-      - Client
-      - Command Line
-    humanURL: https://httpie.io/
-    properties:
-      - url: https://httpie.io/
-        type: Documentation
-      - url: openapi/httpie-httpie-openapi.yml
-        type: OpenAPI
-      - url: json-schema/request.json
-        type: JSONSchema
-      - url: json-schema/response.json
-        type: JSONSchema
-      - url: json-schema/session.json
-        type: JSONSchema
-      - url: json-ld/httpie-context.jsonld
-        type: JSONLD
-    description: >-
-      HTTPie is a user-friendly command-line and web-based HTTP client designed
-      for interacting with APIs and web services. It provides an intuitive
-      interface for crafting HTTP requests, inspecting responses, and managing
-      sessions with persistent headers, authentication, and cookies. The HTTPie
-      API exposes a hello endpoint for connectivity testing and a web application
-      interface for graphical API interaction.
-name: HTTPie
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Command Line
   - Client
-  - Platform
-type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-access: 3rd-Party
+  - Developer Tools
+  - API Testing
 created: '2025-01-08'
-modified: '2026-03-14'
-position: Consumer
-description: >-
-  HTTPie is a user-friendly command-line and web-based HTTP client designed for
-  interacting with APIs and web services. It provides an intuitive interface for
-  crafting HTTP requests, inspecting responses, and managing sessions with
-  persistent headers, authentication, and cookies.
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: httpie:httpie
+    name: HTTPie
+    description: >-
+      HTTPie is a user-friendly command-line and web-based HTTP client designed
+      for interacting with APIs. It provides an intuitive interface for
+      crafting HTTP requests, inspecting responses, and managing sessions.
+    humanURL: https://httpie.io/
+    tags:
+      - API Client
+      - Command Line
+    properties:
+      - type: Documentation
+        url: https://httpie.io/docs/
+      - type: OpenAPI
+        url: openapi/httpie-httpie-openapi.yml
+      - type: Getting Started
+        url: https://httpie.io/docs/cli/installation
+common:
+  - type: Website
+    url: https://httpie.io/
+  - type: Documentation
+    url: https://httpie.io/docs/
+  - type: GitHub Organization
+    url: https://github.com/httpie
+  - type: Sign Up
+    url: https://httpie.io/app
+  - type: Blog
+    url: https://httpie.io/blog
+  - type: Pricing
+    url: https://httpie.io/pricing
 maintainers:
   - FN: Kin Lane
-    email: info@apievangelist.com
-specificationVersion: '0.19'
+    email: kin@apievangelist.com
