@@ -21,7 +21,7 @@ paths:
   /hello:
     get:
       operationId: getHello
-      summary: Hello endpoint
+      summary: HTTPie Hello endpoint
       description: >-
         A simple hello endpoint used for connectivity testing and
         verification that the HTTPie service is running and reachable.
