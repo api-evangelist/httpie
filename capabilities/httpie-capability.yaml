@@ -1,0 +1,92 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: HTTPie API
+  description: The HTTPie API provides endpoints for the HTTPie web application, including a simple hello endpoint for connectivity
+    testing and access to the HTTPie web-based API client interface. HTTPie is a user-friendly command-line and web-based
+    HTTP client that makes interacting with APIs and web services intuitive and productive.
+  tags:
+  - Httpie
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: httpie
+    baseUri: https://httpie.io
+    description: HTTPie API HTTP API.
+    resources:
+    - name: hello
+      path: /hello
+      operations:
+      - name: gethello
+        method: GET
+        description: HTTPie Hello endpoint
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: app
+      path: /app
+      operations:
+      - name: getapp
+        method: GET
+        description: HTTPie web application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: httpie-rest
+    description: REST adapter for HTTPie API.
+    resources:
+    - path: /hello
+      name: gethello
+      operations:
+      - method: GET
+        name: gethello
+        description: HTTPie Hello endpoint
+        call: httpie.gethello
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /app
+      name: getapp
+      operations:
+      - method: GET
+        name: getapp
+        description: HTTPie web application
+        call: httpie.getapp
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: httpie-mcp
+    transport: http
+    description: MCP adapter for HTTPie API for AI agent use.
+    tools:
+    - name: gethello
+      description: HTTPie Hello endpoint
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: httpie.gethello
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getapp
+      description: HTTPie web application
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: httpie.getapp
+      outputParameters:
+      - type: object
+        mapping: $.
