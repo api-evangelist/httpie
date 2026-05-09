@@ -3,11 +3,12 @@
   "feeds": [
     {
       "source": "https://httpie.io/blog",
-      "feed_url": "https://httpie.io/api/feed/atom",
-      "saved": 10,
-      "title": "HTTPie blog"
+      "feed_url": "",
+      "title": "",
+      "saved": 0,
+      "error": "no_feed"
     }
   ],
   "post_count": 10,
-  "fetched": "2026-05-03T23:29:20Z"
+  "fetched": "2026-05-09T20:17:51Z"
 }
