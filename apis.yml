@@ -51,7 +51,7 @@ apis:
         url: json-schema/request.json
       - type: JSON-LD Context
         url: json-ld/httpie-context.jsonld
-      - type: Getting Started
+      - type: GettingStarted
         url: https://httpie.io/docs/cli/installation
       - type: GitHub
         url: https://github.com/httpie/cli
@@ -60,9 +60,9 @@ common:
     url: https://httpie.io/
   - type: Documentation
     url: https://httpie.io/docs/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/httpie
-  - type: Sign Up
+  - type: SignUp
     url: https://httpie.io/app
   - type: Blog
     url: https://httpie.io/blog
