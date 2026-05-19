@@ -1,0 +1,67 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: HTTPie API — Hello
+  description: 'HTTPie API — Hello. 1 operations. Lead operation: HTTPie Hello endpoint. Self-contained Naftiko capability
+    covering one Httpie business surface.'
+  tags:
+  - Httpie
+  - Hello
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    HTTPIE_API_KEY: HTTPIE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: httpie-hello
+    baseUri: https://httpie.io
+    description: HTTPie API — Hello business capability. Self-contained, no shared references.
+    resources:
+    - name: hello
+      path: /hello
+      operations:
+      - name: gethello
+        method: GET
+        description: HTTPie Hello endpoint
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: httpie-hello-rest
+    port: 8080
+    description: REST adapter for HTTPie API — Hello. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/hello
+      name: hello
+      description: REST surface for hello.
+      operations:
+      - method: GET
+        name: gethello
+        description: HTTPie Hello endpoint
+        call: httpie-hello.gethello
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: httpie-hello-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for HTTPie API — Hello. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: httpie-hello-endpoint
+      description: HTTPie Hello endpoint
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: httpie-hello.gethello
+      outputParameters:
+      - type: object
+        mapping: $.
