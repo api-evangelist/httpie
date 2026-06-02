@@ -2,12 +2,20 @@
   "repo": "httpie",
   "feeds": [
     {
-      "source": "https://httpie.io/blog",
+      "source": "https://httpie.io/api/feed/atom",
       "feed_url": "https://httpie.io/api/feed/atom",
-      "title": "HTTPie blog",
-      "saved": 30
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://httpie.io/app",
+      "feed_url": "https://httpie.io/app",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "post_count": 40,
-  "fetched": "2026-05-17T20:48:52Z"
+  "fetched": "2026-06-01T23:35:02Z"
 }
