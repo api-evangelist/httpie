@@ -1,0 +1,253 @@
+{
+  "item": [
+    {
+      "id": "480b6999-0e0d-4167-a219-01f3aa96a372",
+      "name": "App",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2a70ceff-7df9-4491-b663-fa77a5dca922",
+          "name": "HTTPie web application",
+          "request": {
+            "name": "HTTPie web application",
+            "description": {
+              "content": "Access the HTTPie web-based API client application, which provides a graphical interface for crafting and sending HTTP requests, inspecting responses, and managing API workflows.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "app"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/html"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "94745548-b79d-4b75-8d39-c0136df4ae87",
+              "name": "Web application loaded successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "app"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/html"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/html"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c2b38c76-7f2d-42fb-ab86-d7ee19bfdd88",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "app"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"code\": 8792\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c59a6ad8-b609-47fb-97de-790367b53362",
+      "name": "Hello",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6721d797-d3bb-48e6-92f5-d16dbc39d6ac",
+          "name": "HTTPie Hello endpoint",
+          "request": {
+            "name": "HTTPie Hello endpoint",
+            "description": {
+              "content": "A simple hello endpoint used for connectivity testing and verification that the HTTPie service is running and reachable.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "hello"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "620500e2-bf6b-4d3a-9da7-d4a520394be6",
+              "name": "Successful hello response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hello"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"hello\",\n  \"version\": \"1.0.0\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2fdaf940-79ff-4bb7-8897-64e3b6673acf",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hello"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"code\": 8792\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://httpie.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "4d4cbd5e-276d-4682-b86c-f24e30b632d7",
+    "name": "HTTPie API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The HTTPie API provides endpoints for the HTTPie web application, including a simple hello endpoint for connectivity testing and access to the HTTPie web-based API client interface. HTTPie is a user-friendly command-line and web-based HTTP client that makes interacting with APIs and web services intuitive and productive.\n\nContact Support:\n Name: HTTPie",
+      "type": "text/plain"
+    }
+  }
+}

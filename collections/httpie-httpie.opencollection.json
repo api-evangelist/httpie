@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "HTTPie API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Hello",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "HTTPie Hello endpoint",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://httpie.io/hello"
+          },
+          "docs": "A simple hello endpoint used for connectivity testing and verification that the HTTPie service is running and reachable."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "App",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "HTTPie web application",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://httpie.io/app"
+          },
+          "docs": "Access the HTTPie web-based API client application, which provides a graphical interface for crafting and sending HTTP requests, inspecting responses, and managing API workflows."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
