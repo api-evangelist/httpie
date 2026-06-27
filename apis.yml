@@ -41,9 +41,9 @@ apis:
         url: https://httpie.io/docs/
       - type: OpenAPI
         url: openapi/httpie-httpie-openapi.yml
-      - type: JSON Schema
+      - type: JSONSchema
         url: json-schema/request.json
-      - type: JSON-LD Context
+      - type: JSONLDContext
         url: json-ld/httpie-context.jsonld
       - type: GettingStarted
         url: https://httpie.io/docs/cli/installation
@@ -58,7 +58,7 @@ common:
     url: https://httpie.io/docs/
   - type: GitHubOrganization
     url: https://github.com/httpie
-  - type: SignUp
+  - type: Signup
     url: https://httpie.io/app
   - type: Blog
     url: https://httpie.io/blog
