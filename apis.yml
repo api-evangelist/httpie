@@ -50,6 +50,8 @@ apis:
       - type: GitHub
         url: https://github.com/httpie/cli
 common:
+  - type: DomainSecurity
+    url: security/httpie-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/httpie
   - type: Website
