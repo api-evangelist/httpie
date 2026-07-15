@@ -50,6 +50,8 @@ apis:
       - type: GitHub
         url: https://github.com/httpie/cli
 common:
+  - type: AgenticAccess
+    url: agentic-access/httpie-agentic-access.yml
   - type: DomainSecurity
     url: security/httpie-domain-security.yml
   - type: LinkedIn
