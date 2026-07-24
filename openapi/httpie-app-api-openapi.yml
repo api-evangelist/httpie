@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: HTTPie App API
+  description: The HTTPie API provides endpoints for the HTTPie web application, including a simple hello endpoint for connectivity testing and access to the HTTPie web-based API client interface. HTTPie is a user-friendly command-line and web-based HTTP client that makes interacting with APIs and web services intuitive and productive.
+  version: 1.0.0
+  contact:
+    name: HTTPie
+    url: https://httpie.io
+  license:
+    name: BSD-3-Clause
+    url: https://opensource.org/licenses/BSD-3-Clause
+servers:
+- url: https://httpie.io
+  description: HTTPie Production
+tags:
+- name: App
+paths:
+  /app:
+    get:
+      operationId: getApp
+      summary: HTTPie web application
+      description: Access the HTTPie web-based API client application, which provides a graphical interface for crafting and sending HTTP requests, inspecting responses, and managing API workflows.
+      responses:
+        '200':
+          description: Web application loaded successfully
+          content:
+            text/html:
+              schema:
+                type: string
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      tags:
+      - App
+components:
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: A human-readable error message.
+        code:
+          type: integer
+          description: The HTTP status code of the error.
+      required:
+      - error
+      - code
