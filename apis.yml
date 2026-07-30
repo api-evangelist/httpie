@@ -10,7 +10,19 @@ description: >-
   request and response model that the CLI exposes.
 url: https://raw.githubusercontent.com/api-evangelist/httpie/refs/heads/main/apis.yml
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/httpie.png
 tags:
   - API Client
   - API Testing
@@ -25,30 +37,44 @@ created: '2025-01-08'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: httpie:httpie
-    name: HTTPie
-    description: >-
-      HTTPie is a user-friendly command-line and web-based HTTP client designed for interacting with APIs. It provides
-      an intuitive interface for crafting HTTP requests, inspecting responses, and managing sessions with persistent
-      headers, authentication, and cookies.
-    humanURL: https://httpie.io/
-    tags:
-      - API Client
-      - Command Line
-      - HTTP
-    properties:
-      - type: Documentation
-        url: https://httpie.io/docs/
-      - type: OpenAPI
-        url: openapi/httpie-httpie-openapi.yml
-      - type: JSONSchema
-        url: json-schema/request.json
-      - type: JSONLDContext
-        url: json-ld/httpie-context.jsonld
-      - type: GettingStarted
-        url: https://httpie.io/docs/cli/installation
-      - type: GitHub
-        url: https://github.com/httpie/cli
+- aid: httpie:httpie-app-api
+  name: HTTPie App API
+  description: The App API from HTTPie — 1 operation(s) for app.
+  humanURL: https://httpie.io/
+  tags:
+  - App
+  properties:
+  - type: OpenAPI
+    url: openapi/httpie-app-api-openapi.yml
+  - type: Documentation
+    url: https://httpie.io/docs/
+  - type: JSONSchema
+    url: json-schema/request.json
+  - type: JSONLDContext
+    url: json-ld/httpie-context.jsonld
+  - type: GettingStarted
+    url: https://httpie.io/docs/cli/installation
+  - type: GitHub
+    url: https://github.com/httpie/cli
+- aid: httpie:httpie-hello-api
+  name: HTTPie Hello API
+  description: The Hello API from HTTPie — 1 operation(s) for hello.
+  humanURL: https://httpie.io/
+  tags:
+  - Hello
+  properties:
+  - type: OpenAPI
+    url: openapi/httpie-hello-api-openapi.yml
+  - type: Documentation
+    url: https://httpie.io/docs/
+  - type: JSONSchema
+    url: json-schema/request.json
+  - type: JSONLDContext
+    url: json-ld/httpie-context.jsonld
+  - type: GettingStarted
+    url: https://httpie.io/docs/cli/installation
+  - type: GitHub
+    url: https://github.com/httpie/cli
 common:
   - type: AgenticAccess
     url: agentic-access/httpie-agentic-access.yml
