@@ -1,0 +1,16 @@
+{
+  "provider": "httpie",
+  "sources": [
+    "httpie-app-api-openapi.yml",
+    "httpie-hello-api-openapi.yml"
+  ],
+  "outputs": [
+    "httpie-app-api-openapi.yml",
+    "httpie-hello-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
