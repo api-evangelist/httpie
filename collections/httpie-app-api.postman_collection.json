@@ -1,0 +1,137 @@
+{
+  "item": [
+    {
+      "id": "de132d16-5041-43f5-bc71-9952c343a7a7",
+      "name": "App",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "17178b56-036a-4672-81bb-71bd6bc041d8",
+          "name": "HTTPie web application",
+          "request": {
+            "name": "HTTPie web application",
+            "description": {
+              "content": "Access the HTTPie web-based API client application, which provides a graphical interface for crafting and sending HTTP requests, inspecting responses, and managing API workflows.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "app"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/html"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a34e1998-5b59-4e4e-a2fb-48ff88cc75bc",
+              "name": "Web application loaded successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "app"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/html"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/html"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "34ceaaae-4afb-44d9-8bad-8d213a4bac90",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "app"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"code\": 5266\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://httpie.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "41600736-9816-4ad7-a651-0d9eb8cca100",
+    "name": "HTTPie App API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The HTTPie API provides endpoints for the HTTPie web application, including a simple hello endpoint for connectivity testing and access to the HTTPie web-based API client interface. HTTPie is a user-friendly command-line and web-based HTTP client that makes interacting with APIs and web services intuitive and productive.\n\nContact Support:\n Name: HTTPie",
+      "type": "text/plain"
+    }
+  }
+}

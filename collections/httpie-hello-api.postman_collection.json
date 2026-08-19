@@ -1,0 +1,137 @@
+{
+  "item": [
+    {
+      "id": "ba290c1c-6e87-4fc0-89b2-49f80ff58bfe",
+      "name": "Hello",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a0f1cd5d-ad90-4552-976c-fc36467a1c04",
+          "name": "HTTPie Hello endpoint",
+          "request": {
+            "name": "HTTPie Hello endpoint",
+            "description": {
+              "content": "A simple hello endpoint used for connectivity testing and verification that the HTTPie service is running and reachable.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "hello"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1f874b62-6351-4ae5-8033-ca62d09806d1",
+              "name": "Successful hello response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hello"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"hello\",\n  \"version\": \"1.0.0\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0c09444e-1e59-4341-8929-27bff17f35b7",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hello"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"code\": 8160\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://httpie.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "4df564d9-22df-492d-be08-ab2cf6d5d93a",
+    "name": "HTTPie App Hello API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The HTTPie API provides endpoints for the HTTPie web application, including a simple hello endpoint for connectivity testing and access to the HTTPie web-based API client interface. HTTPie is a user-friendly command-line and web-based HTTP client that makes interacting with APIs and web services intuitive and productive.\n\nContact Support:\n Name: HTTPie",
+      "type": "text/plain"
+    }
+  }
+}
