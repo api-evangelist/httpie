@@ -98,6 +98,8 @@ apis:
   - type: GitHub
     url: https://github.com/httpie/cli
 common:
+  - type: VendorFacets
+    url: vendor-facets/httpie-vendor-facets.yml
   - type: AgenticAccess
     url: agentic-access/httpie-agentic-access.yml
   - type: DomainSecurity
