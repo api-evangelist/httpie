@@ -37,18 +37,6 @@ paths:
       - Hello
 components:
   schemas:
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: string
-          description: A human-readable error message.
-        code:
-          type: integer
-          description: The HTTP status code of the error.
-      required:
-      - error
-      - code
     HelloResponse:
       type: object
       properties:
@@ -64,3 +52,15 @@ components:
           - 1.0.0
       required:
       - message
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: A human-readable error message.
+        code:
+          type: integer
+          description: The HTTP status code of the error.
+      required:
+      - error
+      - code
